@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "terminator-ai"
+version = "3.0.0-ultimate"
+description = "Revolutionary AI ecosystem with sentient consciousness"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Terminator Development Team", email = "dev@terminator.ai"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.21.0",
+    "psutil>=5.8.0",
+    "requests>=2.25.0",
+    "aiohttp>=3.8.0",
+    "cryptography>=3.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "mypy>=0.991",
+    "pytest-asyncio>=0.20.0",
+    "pytest-cov>=4.0.0",
+]
+monitoring = [
+    "prometheus-client>=0.12.0",
+    "structlog>=21.1.0",
+]
+
+[project.scripts]
+terminator = "terminator.cli.main:main"
+terminator-sentient = "terminator.core.consciousness:main"
+terminator-discovery = "terminator.core.discovery:main"
+terminator-adapter = "terminator.core.adapter:main"
+terminator-ultimate = "terminator.systems.ultimate:main"
+
+[project.urls]
+Homepage = "https://github.com/reeazmahmud/Terminator"
+Repository = "https://github.com/reeazmahmud/Terminator.git"
+Documentation = "https://github.com/reeazmahmud/Terminator/docs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=terminator --cov-report=html --cov-report=term-missing"
