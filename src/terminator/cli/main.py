@@ -15,7 +15,7 @@ from pathlib import Path
 # Add src to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from terminator.systems.ultimate import TerminatorUltimate
+from terminator.systems.ultimate import TerminatorUltimateComplete
 
 
 def create_parser() -> argparse.ArgumentParser:
@@ -158,7 +158,7 @@ async def launch_integration_mode(scope: str = "all", config: dict = None) -> No
     """Launch integration mode"""
     print(f"🚀 Launching Terminator Integration (Scope: {scope})...")
 
-    terminator = TerminatorUltimate(
+    terminator = TerminatorUltimateComplete(
         test_mode=config.get("test_mode", False) if config else False
     )
 
@@ -222,7 +222,7 @@ async def main() -> int:
         else:
             # Default: launch full system
             print("🚀 Launching Terminator Ultimate - Full System...")
-            terminator = TerminatorUltimate(test_mode=args.test_mode)
+            terminator = TerminatorUltimateComplete(test_mode=args.test_mode)
             await terminator.initialize_all_systems()
             await terminator.start_integration_loop()
 
