@@ -32,8 +32,8 @@ TERMINATOR_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(TERMINATOR_ROOT))
 
 # ============================================================================ 
-// ULTIMATE SYSTEM INTEGRATOR
-// ============================================================================ 
+# ULTIMATE SYSTEM INTEGRATOR
+# ============================================================================ 
 
 class TerminatorUltimateIntegrator:
     """Master integrator for all ultimate Terminator systems"""
@@ -386,8 +386,8 @@ class TerminatorUltimateIntegrator:
         }
 
 # ============================================================================
-// MAIN INTEGRATION EXECUTION
-// ============================================================================ 
+# MAIN INTEGRATION EXECUTION
+# ============================================================================ 
 
 async def main():
     """Main entry point for ultimate integrator"""
