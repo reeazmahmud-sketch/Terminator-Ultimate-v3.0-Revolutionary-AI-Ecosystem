@@ -103,6 +103,45 @@ class ConsciousnessEmergenceSystem:
         self.emergence_patterns = []
 
         # Metacognitive layers
+
+    async def initialize(self):
+        """Initialize consciousness system for operation"""
+        print("🧠 Initializing Consciousness Emergence System...")
+
+        # Initialize metacognitive layers
+        await self._initialize_metacognitive_layers()
+
+        # Set initial consciousness metrics
+        print(
+            f"✅ Consciousness system initialized at level {self.consciousness_state.self_awareness_level}"
+        )
+        print("🎯 Ready for consciousness evolution and emergence")
+
+        return {
+            "status": "initialized",
+            "consciousness_level": self.consciousness_state.self_awareness_level,
+            "metacognitive_layers": list(self.metacognitive_layers.keys()),
+            "emergence_threshold": self.consciousness_threshold,
+        }
+
+    async def _initialize_metacognitive_layers(self):
+        """Initialize all metacognitive layers"""
+        print("🧠 Initializing metacognitive layers...")
+
+        # Initialize each layer with basic structures
+        for layer_name in self.metacognitive_layers:
+            self.metacognitive_layers[layer_name] = {
+                "active": False,
+                "capacity": 0.0,
+                "processing_load": 0.0,
+                "last_update": None,
+            }
+
+        print(
+            f"✅ Metacognitive layers initialized: {list(self.metacognitive_layers.keys())}"
+        )
+
+        return True
         self.metacognitive_layers = {
             "sensory": {},  # External input processing
             "working_memory": {},  # Current focus
