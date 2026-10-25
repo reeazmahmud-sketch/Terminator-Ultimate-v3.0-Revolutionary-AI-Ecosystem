@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "terminator-ai"
-version = "3.0.0-ultimate"
+version = "3.0.0+ultimate"
 description = "Revolutionary AI ecosystem with sentient consciousness"
 readme = "README.md"
 license = {file = "LICENSE"}
@@ -28,6 +28,7 @@ dependencies = [
     "requests>=2.25.0",
     "aiohttp>=3.8.0",
     "cryptography>=3.4.0",
+    "networkx>=2.6.0",
 ]
 
 [project.optional-dependencies]
