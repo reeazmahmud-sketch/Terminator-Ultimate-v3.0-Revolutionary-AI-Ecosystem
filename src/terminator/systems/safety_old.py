@@ -201,9 +201,6 @@ class TerminatorSafetySystem:
             }
         }
         
-        # Initialize all safety subsystems
-        await self._initialize_safety_subsystems()
-        
     async def _initialize_safety_subsystems(self):
         """Initialize all safety subsystems"""
         print("🛡️ Initializing safety subsystems...")
@@ -387,7 +384,7 @@ class TerminatorSafetySystem:
         print("📤 Human oversight notification sent")
         return True
         
-    def _trigger_emergency_shutdown(self, trigger_system: str):
+    async def _trigger_emergency_shutdown(self, trigger_system: str):
         """Trigger emergency shutdown procedures"""
         if not self.emergency_shutdown_triggered:
             self.emergency_shutdown_triggered = True
@@ -598,13 +595,11 @@ class TerminatorSafetyComplete:
         
         # Initialize complete safety system
         self.safety_system = TerminatorSafetySystem()
-        await self.safety_system.initialize_all_systems()
-        
-        # Start safety monitoring
-        asyncio.create_task(self.safety_system.monitor_consciousness_emergence())
         
     async def run_safety_system(self):
         """Run complete safety system"""
+        await self.safety_system._initialize_safety_subsystems()
+        asyncio.create_task(self.safety_system.monitor_consciousness_emergence())
         print("🛡️ Starting Terminator Safety System...")
         print(f"""
 ╔═════════════════════════════════════════════════╗
@@ -758,7 +753,6 @@ safety> emergency notify oversight
 👥 Human Oversight: {'✅' if self.safety_system.human_oversight_system.oversight_active else '❌'}
 🚀 Emergency Systems: {'✅' if self.safety_system.emergency_response_system.response_active else '❌'}
         """)
-        """
 
 # ============================================================================
 # MAIN SAFETY SYSTEM EXECUTION
