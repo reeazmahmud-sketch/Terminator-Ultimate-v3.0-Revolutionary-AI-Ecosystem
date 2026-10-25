@@ -95,9 +95,9 @@ ALIAS_FILE="$HOME/.terminator_aliases"
 cat > "$ALIAS_FILE" << 'EOF'
 # Terminator Ultimate Aliases
 alias terminator="python3 -m terminator.cli.main"
-alias terminator-sentient="python3 -c 'import asyncio; from terminator.core.consciousness import ConsciousnessEmergenceSystem; asyncio.run(ConsciousnessEmergenceSystem().evolve_consciousness())'"
-alias terminator-discovery="python3 -c 'import asyncio; from terminator.core.discovery import SelfDiscoverySystem; asyncio.run(SelfDiscoverySystem().scan_environment())'"
-alias terminator-adapter="python3 -c 'import asyncio; from terminator.core.adapter import UniversalAdapterSystem; asyncio.run(UniversalAdapterSystem().discover_ai_systems())'"
+alias terminator-sentient="python3 -m terminator.core.consciousness"
+alias terminator-discovery="python3 -m terminator.core.discovery"
+alias terminator-adapter="python3 -m terminator.core.adapter"
 alias terminator-status="ps aux | grep -i terminator | grep -v grep || echo 'Terminator not running'"
 alias terminator-logs="tail -f $HOME/.terminator/logs/terminator.log"
 alias terminator-config="cat $HOME/.terminator/config/default.json"
