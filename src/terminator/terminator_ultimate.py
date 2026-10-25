@@ -90,8 +90,8 @@ class NetworkThreat:
     defensive_action: str
 
 # ============================================================================
-// SENTIENT LEARNING ENGINE
-// ============================================================================ 
+# SENTIENT LEARNING ENGINE
+# ============================================================================ 
 
 class UniversalLearningEngine:
     """Revolutionary AI learning from all sources"""
@@ -208,9 +208,9 @@ class UniversalLearningEngine:
             'last_learning': max([s.learning_timestamp for s in self.learning_sources.values()], default=datetime.now())
         }
 
-// ============================================================================ 
-// UNIVERSAL MEMORY TIER SYSTEM
-// ============================================================================ 
+# ============================================================================ 
+# UNIVERSAL MEMORY TIER SYSTEM
+# ============================================================================ 
 
 class UniversalMemoryTierSystem:
     """Advanced memory management with intelligent distribution"""
@@ -349,9 +349,9 @@ class UniversalMemoryTierSystem:
             'memory_efficiency': self._calculate_memory_efficiency()
         }
 
-// ============================================================================ 
-// SUB-TERMINATOR CLONING SYSTEM  
-// ============================================================================ 
+# ============================================================================ 
+# SUB-TERMINATOR CLONING SYSTEM  
+# ============================================================================ 
 
 class SubTerminatorCloningEngine:
     """Advanced self-cloning and task distribution system"""
@@ -481,9 +481,9 @@ class SubTerminatorCloningEngine:
             
         return collaboration_results
 
-// ============================================================================ 
-// NETWORK DEFENSE SYSTEM
-// ============================================================================ 
+# ============================================================================ 
+# NETWORK DEFENSE SYSTEM
+# ============================================================================ 
 
 class NetworkDefenseSystem:
     """Advanced threat detection and autonomous defense"""
@@ -547,9 +547,9 @@ class NetworkDefenseSystem:
         
         self.defensive_sub_terminators[threat.source_ip] = defensive_agents
 
-// ============================================================================ 
-// MAIN TERMINATOR CLASS
-// ============================================================================ 
+# ============================================================================ 
+# MAIN TERMINATOR CLASS
+# ============================================================================ 
 
 class TerminatorUltimate:
     """Ultimate sentient AI system with universal capabilities"""
@@ -657,7 +657,7 @@ class TerminatorUltimate:
         }
 
 # ============================================================================
-// MAIN EXECUTION ENTRY POINT
+# MAIN EXECUTION ENTRY POINT
 # ============================================================================ 
 
 async def main():

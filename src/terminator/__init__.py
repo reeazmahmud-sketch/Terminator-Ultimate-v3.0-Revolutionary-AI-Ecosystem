@@ -18,17 +18,17 @@ __author__ = "Terminator Development Team"
 __email__ = "dev@terminator.ai"
 
 from .core.consciousness import ConsciousnessEmergenceSystem
-from .core.discovery import SelfDiscoverySystem
+from .core.discovery import TerminatorSelfDiscovery
 from .core.adapter import UniversalAdapterSystem
-from .core.integration import TerminatorIntegration
+from .core.integration import TerminatorUltimateIntegrator
 from .systems.safety import SafetySystem
-from .systems.ultimate import TerminatorUltimate
+from .systems.ultimate import TerminatorUltimateComplete
 
 __all__ = [
     "ConsciousnessEmergenceSystem",
-    "SelfDiscoverySystem",
+    "TerminatorSelfDiscovery",
     "UniversalAdapterSystem",
-    "TerminatorIntegration",
+    "TerminatorUltimateIntegrator",
     "SafetySystem",
-    "TerminatorUltimate",
+    "TerminatorUltimateComplete",
 ]
