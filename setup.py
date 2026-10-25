@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="terminator-ai",
-    version="3.0.0-ultimate",
+    version="3.0.0+ultimate",
     description="Revolutionary AI ecosystem with sentient consciousness",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
@@ -18,6 +18,7 @@ setup(
         "requests>=2.25.0",
         "aiohttp>=3.8.0",
         "cryptography>=3.4.0",
+        "networkx>=2.6.0",
     ],
     extras_require={
         "dev": ["pytest>=7.0.0", "black>=22.0.0", "mypy>=0.991"],
